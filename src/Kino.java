@@ -7,6 +7,7 @@ public class Kino implements Serializable {
     private String address;
     private ArrayList<Seans> seans;
     private ArrayList<Pracownik> employees;
+
     //private ArrayList<Bilet> tickets;
 
     public Kino(String name, String address, ArrayList<Seans> seans) {

@@ -6,11 +6,21 @@ public class Main {
     public static void main(String[] args) throws IOException, ClassNotFoundException {
 
         //Kino kino = new Kino("Cinema");
-        Seans obj = new Seans("Fast & Furious", "5-1-2023", "15:00",5, 5);
+        Seans obj = new Seans("Fast & Furious", "5-1-2023", "15:00", 5, 5);
+        Seans obj1 = new Seans("The Matrix", "5-1-2023", "15:00", 6, 6);
         obj.changingSeatStatus('C', 2);
         obj.displaySeatsMap();
 
+        Klient klient = new Klient("Kowalski", "Jan", "jankowalski@gmail.com", "123456789");
+        Klient klient1 = new Klient("Nowak", "Karol", "karol@gmail.com", "123456789");
+        klient.makeReservation(obj, 2);
+        klient.makeReservation(obj1, 1);
+        klient1.makeReservation(obj, 1);
+        System.out.println(klient);
+        System.out.println(klient1);
 
+    }
+}
 
 //        try {
 //            File myObj = new File("filename.dat");
@@ -40,5 +50,5 @@ public class Main {
 //            System.out.println("An error occurred.");
 //            e.printStackTrace();
 //        }
-    }
-}
+// }
+//}
