@@ -5,6 +5,11 @@ public class Seans implements Serializable {
     static char[] letters = new char[26];
     private String title;
     private String day;
+
+    public String getTitle() {
+        return title;
+    }
+
     private String hour;
     private int numberOfRows; //rzędy jako literki (A,B,C...)
     private int numberOfSeats;
@@ -59,7 +64,6 @@ public class Seans implements Serializable {
             }
         }
     }
-
 
     public Boolean isOccupied(char row, int seat) {
         HashMap<Integer, Boolean> rowMap = SeatsRow.get(row);

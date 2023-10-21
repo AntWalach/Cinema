@@ -8,11 +8,21 @@ public class Kino implements Serializable {
     private ArrayList<Seans> seans;
     private ArrayList<Pracownik> employees;
 
-    //private ArrayList<Bilet> tickets;
+    public ArrayList<Seans> getSeans() {
+        return seans;
+    }
 
-    public Kino(String name, String address, ArrayList<Seans> seans) {
+    private ArrayList<Klient> clients;
+
+    public ArrayList<Klient> getClients() {
+        return clients;
+    }
+//private ArrayList<Bilet> tickets;
+
+    public Kino(String name, String address, ArrayList<Seans> seans, ArrayList<Klient> clients) {
         this.name = name;
         this.address = address;
         this.seans = seans;
+        this.clients = clients;
     }
 }

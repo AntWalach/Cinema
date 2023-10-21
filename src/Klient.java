@@ -10,7 +10,6 @@ public class Klient implements Serializable {
     private String name;
     private String email;
     private String phone;
-
     private List<Seans> reservations;
 
 
