@@ -18,9 +18,34 @@ public class FileManagement {
         try (FileInputStream fis = new FileInputStream(dataFilePath);
              ObjectInputStream ois = new ObjectInputStream(fis)) {
 
-            return ois.readObject(); // Wczytaj obiekt z pliku i zwróć go
+            return ois.readObject();
         }
     }
+
+
+    void saveToFile(String fileName, String data) throws IOException {
+        FileWriter f = new FileWriter(fileName);
+        BufferedWriter out = new BufferedWriter(f);
+        out.write(data);
+        out.close();
+    }
+
+    String readFile(String fileName) throws IOException {
+        FileInputStream f = new FileInputStream(fileName);
+        DataInputStream in = new DataInputStream(f);
+        BufferedReader r = new BufferedReader(new InputStreamReader(in));
+        String strLine = "";
+        StringBuilder data = new StringBuilder();
+        while ((strLine = r.readLine()) != null)
+            data.append(strLine).append("\n");
+        in.close();
+        return data.toString();
+    }
+
+
+
+
+
 
 }
 

@@ -17,7 +17,7 @@ public class Kino implements Serializable {
     public ArrayList<Klient> getClients() {
         return clients;
     }
-//private ArrayList<Bilet> tickets;
+
 
     public Kino(String name, String address, ArrayList<Seans> seans, ArrayList<Klient> clients) {
         this.name = name;

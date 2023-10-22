@@ -38,6 +38,10 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+
+    final String RESERVATION_DATA = "reservationList.txt";
+
+
         Kino kino = null;
         FileManagement fileManagement = new FileManagement();
 
@@ -63,6 +67,7 @@ public class Main {
             System.out.println("Menu:");
             System.out.println("1. Zarezerwuj miejsca");
             System.out.println("2. Wyjście");
+            System.out.println("3. Wypisz listę rezerwacji");
 
             int choice = scanner.nextInt();
 
@@ -98,7 +103,11 @@ public class Main {
 
                 ArrayList<Klient> clients = kino.getClients();
                 clients.add(klient);
-
+                try {
+                    fileManagement.saveToFile(RESERVATION_DATA,klient.toString());
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
 
                 selectedSeans.displaySeatsMap();
 
@@ -108,7 +117,14 @@ public class Main {
                 System.out.println("Dziękujemy za skorzystanie z naszej aplikacji!");
                 break;
             } else if (choice == 3) {
-                System.out.println(kino.getSeans());
+                String lista ="";
+                try {
+                    lista = fileManagement.readFile(RESERVATION_DATA);
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+
+                System.out.println(lista);
 
             }
         }
