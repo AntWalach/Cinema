@@ -24,9 +24,10 @@ public class FileManagement {
 
 
     void saveToFile(String fileName, String data) throws IOException {
-        FileWriter f = new FileWriter(fileName);
+        FileWriter f = new FileWriter(fileName,true);
         BufferedWriter out = new BufferedWriter(f);
         out.write(data);
+        out.newLine();
         out.close();
     }
 

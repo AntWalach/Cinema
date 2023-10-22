@@ -1,1 +1,4 @@
-Klient{surname='Leon', name='Kowalski', email='lkowal@gmail.com', phone='222222222', reservations=[Seans{title='Movie 1', day='2023-10-22', hour='18:00', numberOfRows=5, numberOfSeats=10, SeatsRow={A={1=false, 2=false, 3=false, 4=false, 5=false, 6=true, 7=true, 8=true, 9=true, 10=true}, B={1=false, 2=true, 3=true, 4=true, 5=true, 6=true, 7=true, 8=true, 9=true, 10=true}, C={1=false, 2=false, 3=false, 4=false, 5=true, 6=true, 7=true, 8=true, 9=true, 10=true}, D={1=true, 2=true, 3=true, 4=true, 5=true, 6=true, 7=true, 8=true, 9=true, 10=true}, E={1=false, 2=true, 3=true, 4=true, 5=true, 6=true, 7=true, 8=true, 9=true, 10=true}}, SeatsInner={1=false, 2=true, 3=true, 4=true, 5=true, 6=true, 7=true, 8=true, 9=true, 10=true}}]}
+Klient{surname='Test4', name='Test4', email='Test4', phone='Test4', reservations=[C1]}
+Klient{surname='T', name='T', email='T', phone='T', reservations=[D1]}
+Klient{surname='A', name='A', email='A', phone='A', reservations=[A3]}
+Klient{surname='B', name='B', email='B', phone='B', reservations=[Seans{title='Movie 1', day='2023-10-22', hour='18:00'], reservedSeats=[E1]}

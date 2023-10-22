@@ -12,6 +12,8 @@ public class Klient implements Serializable {
     private String phone;
     private List<Seans> reservations;
 
+    private List<String> reservedSeats;
+
 
     public Klient(String surname, String name, String email, String phone) {
         this.surname = surname;
@@ -19,6 +21,8 @@ public class Klient implements Serializable {
         this.email = email;
         this.phone = phone;
         this.reservations = new ArrayList<>();
+        this.reservedSeats = new ArrayList<>();
+
     }
 
     public void makeReservation(Seans seans, int numberOfTickets) {
@@ -40,6 +44,7 @@ public class Klient implements Serializable {
                 seans.changingSeatStatus(rowSelect, seatSelect);
                 System.out.println("Ticket purchased for row " + rowSelect + ", seat " + seatSelect);
                 reservations.add(seans);
+                reservedSeats.add(rowSelectString + seatSelect);
                 ticketsBought++;
             } else {
                 System.out.println("The place is taken. Choose another place...");
@@ -59,6 +64,7 @@ public class Klient implements Serializable {
                 ", email='" + email + '\'' +
                 ", phone='" + phone + '\'' +
                 ", reservations=" + reservations +
+                ", reservedSeats=" + reservedSeats +
                 '}';
     }
 

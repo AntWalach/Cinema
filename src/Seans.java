@@ -101,11 +101,7 @@ public class Seans implements Serializable {
         return "Seans{" +
                 "title='" + title + '\'' +
                 ", day='" + day + '\'' +
-                ", hour='" + hour + '\'' +
-                ", numberOfRows=" + numberOfRows +
-                ", numberOfSeats=" + numberOfSeats +
-                ", SeatsRow=" + SeatsRow +
-                ", SeatsInner=" + SeatsInner +
-                '}';
+                ", hour='" + hour + '\''
+                ;
     }
 }
